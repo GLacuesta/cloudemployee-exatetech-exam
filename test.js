@@ -41,13 +41,15 @@ function bindToTextbox(){
 var container = {}; // array for all textbox that will be clicked
 
 function selectTextbox(elem){
-    if(elem.tagName != "INPUT" && elem.type != "text") return;
+    if(elem.tagName == "INPUT" && elem.type == "text"){
 
     //additional css implementation if green icon switch to red and vice versa
 
     return (container.includes(elem.name)) ? 
                         container = container.filter(item => item !== elem.name) :
-                        container.push(elem.name);
+						container.push(elem.name);
+	}
+	return;
 }
 
 })();
