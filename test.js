@@ -3,7 +3,7 @@
 (function() {
 
 //task 1
-function searchAndReplace(word){
+function searchAndReplace(word, newWord){
 	var page = [document.body], pageObj;
 
 	while (pageObj = page.pop()) {
@@ -15,7 +15,7 @@ function searchAndReplace(word){
 					break;
 				case Node.TEXT_NODE :
 					if (pageObj.childNodes[i].textContent.match(word)) {
-						pageObj.childNodes[i].textContent = pageObj.childNodes[i].textContent.replace(word, "asd ");
+						pageObj.childNodes[i].textContent = pageObj.childNodes[i].textContent.replace(word, newWord);
 					}
 					break;
 			}
